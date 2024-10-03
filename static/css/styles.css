@@ -1,0 +1,12 @@
+/* Custom styles to complement Tailwind CSS */
+html {
+    scroll-behavior: smooth;
+}
+
+.feature-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-icon:hover {
+    transform: scale(1.1);
+}
