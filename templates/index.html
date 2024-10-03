@@ -27,7 +27,7 @@
                 <p class="text-xl mb-12">Experience the power of Flask and Vanilla JS</p>
                 <div class="space-x-4">
                     <a href="#cta" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300">Get Started</a>
-                    <button id="calendly-button" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition duration-300">Schedule a Call</button>
+                    <button id="hero-calendly-button" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition duration-300">Schedule a Call</button>
                 </div>
             </div>
         </section>
@@ -105,7 +105,10 @@
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold mb-6">Ready to Get Started?</h2>
                 <p class="text-xl mb-12">Join us today and experience the difference</p>
-                <a href="{{ url_for('get_started') }}" class="bg-white text-blue-500 px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300">Get Started</a>
+                <div class="space-x-4">
+                    <a href="{{ url_for('get_started') }}" class="bg-white text-blue-500 px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300">Get Started</a>
+                    <button id="cta-calendly-button" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition duration-300">Schedule a Call</button>
+                </div>
             </div>
         </section>
     </main>

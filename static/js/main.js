@@ -10,13 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Calendly modal
-    const calendlyButton = document.getElementById('calendly-button');
-    if (calendlyButton) {
-        calendlyButton.addEventListener('click', () => {
+    const calendlyButtons = document.querySelectorAll('#hero-calendly-button, #cta-calendly-button');
+    calendlyButtons.forEach(button => {
+        button.addEventListener('click', () => {
             Calendly.initPopupWidget({url: 'https://calendly.com/your-calendly-link'});
             return false;
         });
-    }
+    });
 
     // Get Started form submission
     const getStartedForm = document.getElementById('get-started-form');
