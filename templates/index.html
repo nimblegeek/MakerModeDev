@@ -6,6 +6,7 @@
     <title>Modern Landing Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body class="font-sans">
     <header class="bg-gray-900 text-white">
@@ -24,7 +25,10 @@
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl font-bold mb-6">Welcome to Our Modern Landing Page</h1>
                 <p class="text-xl mb-12">Experience the power of Flask and Vanilla JS</p>
-                <a href="#cta" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300">Get Started</a>
+                <div class="space-x-4">
+                    <a href="#cta" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300">Get Started</a>
+                    <button id="calendly-button" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition duration-300">Schedule a Call</button>
+                </div>
             </div>
         </section>
 

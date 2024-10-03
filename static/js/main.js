@@ -23,4 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     featureIcons.forEach(icon => {
         icon.classList.add('feature-icon');
     });
+
+    // Calendly modal
+    const calendlyButton = document.getElementById('calendly-button');
+    calendlyButton.addEventListener('click', () => {
+        Calendly.initPopupWidget({url: 'https://calendly.com/your-calendly-link'});
+        return false;
+    });
 });
