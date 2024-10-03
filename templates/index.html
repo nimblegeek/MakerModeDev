@@ -13,6 +13,7 @@
             <a href="#" class="text-xl font-bold">Logo</a>
             <div>
                 <a href="#features" class="px-3 py-2 hover:text-gray-300">Features</a>
+                <a href="#pricing" class="px-3 py-2 hover:text-gray-300">Pricing</a>
                 <a href="#cta" class="px-3 py-2 hover:text-gray-300">Get Started</a>
             </div>
         </nav>
@@ -50,6 +51,50 @@
                         <img src="{{ url_for('static', filename='images/feature-3.svg') }}" alt="Feature 3" class="w-24 h-24 mx-auto mb-4">
                         <h3 class="text-xl font-semibold mb-2">Easy Integration</h3>
                         <p>Works seamlessly with Flask</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Pricing Plans</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Basic Plan -->
+                    <div class="bg-white rounded-lg shadow-md p-8 text-center">
+                        <h3 class="text-2xl font-semibold mb-4">Basic</h3>
+                        <p class="text-4xl font-bold mb-6">$9.99<span class="text-base font-normal">/month</span></p>
+                        <ul class="mb-8 text-left">
+                            <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Feature 1</li>
+                            <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Feature 2</li>
+                            <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Feature 3</li>
+                        </ul>
+                        <a href="#" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300 inline-block">Choose Plan</a>
+                    </div>
+                    <!-- Pro Plan -->
+                    <div class="bg-white rounded-lg shadow-md p-8 text-center border-2 border-blue-500 transform scale-105">
+                        <h3 class="text-2xl font-semibold mb-4">Pro</h3>
+                        <p class="text-4xl font-bold mb-6">$19.99<span class="text-base font-normal">/month</span></p>
+                        <ul class="mb-8 text-left">
+                            <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> All Basic Features</li>
+                            <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Pro Feature 1</li>
+                            <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Pro Feature 2</li>
+                            <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Pro Feature 3</li>
+                        </ul>
+                        <a href="#" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300 inline-block">Choose Plan</a>
+                    </div>
+                    <!-- Enterprise Plan -->
+                    <div class="bg-white rounded-lg shadow-md p-8 text-center">
+                        <h3 class="text-2xl font-semibold mb-4">Enterprise</h3>
+                        <p class="text-4xl font-bold mb-6">$49.99<span class="text-base font-normal">/month</span></p>
+                        <ul class="mb-8 text-left">
+                            <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> All Pro Features</li>
+                            <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Enterprise Feature 1</li>
+                            <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Enterprise Feature 2</li>
+                            <li class="mb-2 flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Enterprise Feature 3</li>
+                        </ul>
+                        <a href="#" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300 inline-block">Choose Plan</a>
                     </div>
                 </div>
             </div>
