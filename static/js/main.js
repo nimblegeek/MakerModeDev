@@ -9,21 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form submission
-    const form = document.getElementById('signup-form');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const email = form.querySelector('input[type="email"]').value;
-        alert(`Thank you for signing up with email: ${email}`);
-        form.reset();
-    });
-
-    // Add animation to feature icons
-    const featureIcons = document.querySelectorAll('#features img');
-    featureIcons.forEach(icon => {
-        icon.classList.add('feature-icon');
-    });
-
     // Calendly modal
     const calendlyButton = document.getElementById('calendly-button');
     if (calendlyButton) {
@@ -31,7 +16,38 @@ document.addEventListener('DOMContentLoaded', () => {
             Calendly.initPopupWidget({url: 'https://calendly.com/your-calendly-link'});
             return false;
         });
-    } else {
-        console.error('Calendly button not found');
+    }
+
+    // Get Started form submission
+    const getStartedForm = document.getElementById('get-started-form');
+    if (getStartedForm) {
+        getStartedForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(getStartedForm);
+            const data = Object.fromEntries(formData.entries());
+            data.jobTitle = data['job-title'];
+            delete data['job-title'];
+
+            try {
+                const response = await fetch('/get-started', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    alert(result.message);
+                    getStartedForm.reset();
+                } else {
+                    alert('An error occurred. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }
+        });
     }
 });
